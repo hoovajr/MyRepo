@@ -1,14 +1,11 @@
-SOURCE_FOLDER = 0
-DESTINATION_FOLDER = 0
+# specifically will use shutil.copytree()  
 
-# specifically will use shutil.copytree() in teh next 
-
-#instantiate new FileCopier
-oneNoteBackup = FileCopier()
+#instantiate new FolderCopier
+oneNoteBackup = FolderCopier()
 
 # Set prefix
-oneNoteBackup.set_prefix("test_dest")
-oneNoteBackup.
+oneNoteBackup.set_prefix("OneNote")
+oneNoteBackup.set_source_folder("C:\OneNoteNotebooks")
 
 # Set Source Folder, destination folder
 # Create Backup subfolder (prefix + current datetimestamp)
