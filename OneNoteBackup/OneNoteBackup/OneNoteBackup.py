@@ -10,7 +10,7 @@ oneNoteBackup.set_destination_folder(prefix="OneNote",
 oneNoteBackup.copy_folder()
 
 # Still to do:
-## How to deal with MyDocuments, and get that to work (e.g. errors when using "\\CLTFILE" etc.)
+## How to deal with MyDocuments, and get that to work (e.g. double backslash etc.)
 ## If number of backups > 5, then delete the oldest backups starting with Prefix such that only 5 are remaining.
 ## Create batch file.
 ## Bonus - Create executable, annotate, and ensure PEP8 compliant.
