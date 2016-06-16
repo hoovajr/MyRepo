@@ -1,14 +1,16 @@
-# specifically will use shutil.copytree()  
+import FolderCopier
 
 #instantiate new FolderCopier
-oneNoteBackup = FolderCopier()
+oneNoteBackup = FolderCopier.FolderCopier()
 
 # Set prefix
-oneNoteBackup.set_prefix("OneNote")
 oneNoteBackup.set_source_folder("C:\OneNoteNotebooks")
+oneNoteBackup.set_destination_folder(prefix="OneNote", 
+                                     dest_location="C:\OneNoteBackups")
+oneNoteBackup.copy_folder()
 
-# Set Source Folder, destination folder
-# Create Backup subfolder (prefix + current datetimestamp)
-# Copy Folders from source folder to newly created backup folder
-# If number of backups > 5, then delete the oldest backup
-
+# Still to do:
+## How to deal with MyDocuments, and get that to work (e.g. errors when using "\\CLTFILE" etc.)
+## If number of backups > 5, then delete the oldest backups starting with Prefix such that only 5 are remaining.
+## Create batch file.
+## Bonus - Create executable, annotate, and ensure PEP8 compliant.
