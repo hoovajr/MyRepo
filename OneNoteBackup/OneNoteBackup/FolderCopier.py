@@ -2,7 +2,6 @@ import datetime
 import os
 import shutil
 
-
 # specifically will use shutil.copytree()  
 
 class FolderCopier:
@@ -14,8 +13,11 @@ class FolderCopier:
     
     def set_destination_folder(self, prefix, dest_location):
         suffix = '_{:%Y-%m-%d_%H.%M.%S}'.format(datetime.datetime.now())
-        self.destination_folder = dest_location + "\\" + prefix + suffix
+        self.dest_location = dest_location
+        self.destination_folder = self.dest_location + "\\" + prefix + suffix
         print("dest=", self.destination_folder)        
 
     def copy_folder(self):
+        if self.source_folder == self.dest_location:
+                raise Exception("Source folder and destination folder cannot be the same.")
         shutil.copytree(self.source_folder, self.destination_folder)
