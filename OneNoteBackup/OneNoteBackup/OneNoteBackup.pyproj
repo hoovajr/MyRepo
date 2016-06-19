@@ -12,6 +12,9 @@
     <OutputPath>.</OutputPath>
     <Name>OneNoteBackup</Name>
     <RootNamespace>OneNoteBackup</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>"C:\Source Test 1" "\\CLTFILE02\UserFiles\E233187\Documents\OneNoteBackups"</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
