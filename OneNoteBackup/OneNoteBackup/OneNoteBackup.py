@@ -11,6 +11,7 @@ oneNoteBackup.set_source_folder(sys.argv[1])
 oneNoteBackup.set_destination_folder(prefix="OneNote", 
                                      dest_location=sys.argv[2])
 oneNoteBackup.copy_folder()
+oneNoteBackup.purge_old_backups()
 
 # Still to do:
 ## (done) (use r for raw strings) How to deal with MyDocuments, and get that to work (e.g. double backslash etc.)
