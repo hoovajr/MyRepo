@@ -29,3 +29,6 @@ class FolderCopier:
         if num_backups_to_keep < 1:
             raise Exception("Number of backups to keep must be at least 1.")
 
+        backups_list=[]
+        for item in os.listdir(dest_location):
+            backups_list.add('\\'.join((dest_location, item)))
