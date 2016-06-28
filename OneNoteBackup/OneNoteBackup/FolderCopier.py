@@ -12,6 +12,7 @@ class FolderCopier:
         print("source=", self.source_folder)
     
     def set_destination_folder(self, prefix, dest_location):
+        # Sets destination backup folder to start with prefix and end with timestamp.
         self.prefix = prefix
         suffix = '_{:%Y-%m-%d_%H.%M.%S}'.format(datetime.datetime.now())
         self.dest_location = dest_location
@@ -31,4 +32,5 @@ class FolderCopier:
 
         backups_list=[]
         for item in os.listdir(dest_location):
-            backups_list.add('\\'.join((dest_location, item)))
+            if item.startswith(self.prefix):
+                    backups_list.append('\\'.join((dest_location, item)))
