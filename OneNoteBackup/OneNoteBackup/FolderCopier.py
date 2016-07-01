@@ -30,7 +30,14 @@ class FolderCopier:
         if num_backups_to_keep < 1:
             raise Exception("Number of backups to keep must be at least 1.")
 
+        # Create a list of absolute paths to all backups with this prefix
         backups_list=[]
-        for item in os.listdir(dest_location):
+        for item in os.listdir(self.dest_location):
             if item.startswith(self.prefix):
-                    backups_list.append('\\'.join((dest_location, item)))
+                    backups_list.append('\\'.join((self.dest_location, item)))
+
+        # while there are more than num_backups_to_keep, delete the folder and contents.
+        length = len(backups_list)        
+        while length > num_backups_to_keep:
+            shutil.rmtree(backups_list.pop(0))
+            length-=1
