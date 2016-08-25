@@ -3,15 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>eb1659e2-3e6f-4a3a-81cf-80f34106798a</ProjectGuid>
+    <ProjectGuid>26ef440e-a543-4f70-a540-b5e4481cb4f5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>FlaskTest.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <StartupFile>PythonChallenge3.py</StartupFile>
+    <SearchPath>..\..\PythonChallenge1\PythonChallenge1\</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>FlaskTest</Name>
-    <RootNamespace>FlaskTest</RootNamespace>
+    <Name>PythonApplication3</Name>
+    <RootNamespace>PythonApplication3</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,13 +21,17 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PythonChallenge3.py" />
+    <Compile Include="PythonApplication3.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PythonApplication3\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="FlaskTest.py" />
-  </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
