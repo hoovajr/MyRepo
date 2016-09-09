@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Python Poem.txt" />
+    <Content Include="Words.txt" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

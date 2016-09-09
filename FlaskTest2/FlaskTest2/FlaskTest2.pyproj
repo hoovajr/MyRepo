@@ -25,6 +25,11 @@
     <Compile Include="FlaskTest2.py" />
     <Compile Include="vsearch.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="base.html" />
+    <Content Include="entry.html" />
+    <Content Include="results.html" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
